@@ -58,7 +58,9 @@ module Eqalert
     areas.keys.sort.each { |area|
       puts "%s %d" % [area,areas[area]]
     }
-    areas.max { |a, b| a[1] <=> b[1] }[1]
+    area = areas.max { |a, b| a[1] <=> b[1] }
+    return area[1] if area
+    0
   end
 
   module_function :alert, :fetch
