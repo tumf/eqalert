@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Yoshihiro TAKAHARA"]
   s.email       = ["y.takahara@gmail.com"]
   s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.summary     = %q{This software is find frequency of earth quake in Japan.}
+  s.description = %q{Find frequency of earth quake in Japan.}
 
   s.rubyforge_project = "eqalert"
 
