@@ -15,11 +15,11 @@ INSTALL
 USAGE
 -----
 
-1. add your crontab
+add your crontab
+
+     $ crontab -e
+     */5 * * * * exec setlock -nX /tmp/eqalert.lock cronlog -- ruby /path/to/bin/eqalert 2>&1
 
 
-    $ crontab -e
-    */5 * * * * exec setlock -nX /tmp/eqalert.lock cronlog -- ruby /path/to/bin/eqalert 2>&1
 
-
-
+[![endorse](http://api.coderwall.com/tumf/endorsecount.png)](http://coderwall.com/tumf)
