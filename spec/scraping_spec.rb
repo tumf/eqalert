@@ -1,6 +1,7 @@
 $:.unshift(File.expand_path(File.join(File.dirname(__FILE__),'..','lib')))
 require 'eqalert'
-
+require 'coveralls'
+Coveralls.wear!
 require 'mechanize_rspec'
 Mechanize::Config.dirname = File.expand_path(File.join(File.dirname(__FILE__),'samples'))
 
