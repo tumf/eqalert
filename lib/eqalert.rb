@@ -61,18 +61,20 @@ module Eqalert
 
   # @last 現在からの秒数
   def fetch(last,max = 200)
+    data = []
     agent = Mechanize.new
     (1..max).each { |n|
       agent.get(URL % n) { |page|
-        data,continue = parse_page(page,last)
+        items,continue = parse_page(page,last)
+        data += items
         break unless continue
       }
     }
     data
   end
 
-  def alert
-    data = fetch(12*60*60)
+  def alert last = 12*60*60
+    data = fetch last
     areas = {}
     areas.default = 0
     data.each { |item|  areas[item[:area]] += 1  }
@@ -80,8 +82,8 @@ module Eqalert
       puts "%s %d" % [area,areas[area]]
     }
     area = areas.max { |a, b| a[1] <=> b[1] }
-    return area[1] if area
-    0
+    return 0 unless area
+    area[1]
   end
 
   module_function :alert, :fetch, :parse_page, :parse_item, :parse_id, :parse_time, :parse_area, :parse_power
