@@ -1,3 +1,8 @@
+Earth Quake Alert in Japan
+==========================
+
+[![Build Status](https://travis-ci.org/tumf/eqalert.png?branch=master)](https://travis-ci.org/tumf/eqalert) [![Code Climate](https://codeclimate.com/github/tumf/eqalert.png)](https://codeclimate.com/github/tumf/eqalert) [![Dependency Status](https://gemnasium.com/tumf/eqalert.png)](https://gemnasium.com/tumf/eqalert) [![Coverage Status](https://coveralls.io/repos/tumf/eqalert/badge.png)](https://coveralls.io/r/tumf/eqalert)
+
 INSTALL
 -------
 
